@@ -1,0 +1,175 @@
+:root {
+    --solf-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --very-dark-blue-main-bg: hsl(217, 54%, 11%);
+    --very-dark-blue-card-bg: hsl(216, 50%, 16%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*,
+::after,
+::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--very-dark-blue-main-bg);
+    font-family: Outfit, sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    padding: 24px;
+    background-color: var(--very-dark-blue-card-bg);
+    width: 350px;
+    border-radius: 12px;
+}
+
+h1 {
+    color: var(--White, #FFF);
+    font-family: Outfit;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 24px;
+}
+
+p {
+    color: var(--solf-blue, #8BACD9);
+    font-family: Outfit;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 26px;
+    margin-top: 16px;
+}
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* on mouseover show overlay and view */
+header:hover .overlay {
+    opacity: 0.503;
+}
+
+header:hover .view {
+    display: block;
+}
+
+header img {
+    width: 100%;
+    display: block;
+}
+
+.price-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+/* .overlay */
+.overlay {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    background-color: var(--cyan);
+    opacity: 0;
+}
+
+.view {
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    display: none;
+}
+
+.price {
+    color: var(--cyan, #00FFF8);
+    font-family: Outfit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    background-image: url(../images/icon-ethereum.svg);
+    background-repeat: no-repeat;
+    padding-left: 18px;
+    display: block;
+    background-position-y: 2px;
+}
+
+.days-left {
+    color: var(--soft-blue, #8BACD9);
+    font-family: Outfit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    background-image: url(../images/icon-clock.svg);
+    background-repeat: no-repeat;
+    background-position-y: 2px;
+    padding-left: 24px;
+    display: block;
+}
+
+.author-details {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.author-details .text {
+    color: var(--Soft-Blue, #8BACD9);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Outfit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 16px;
+    margin-bottom: 4px;
+}
+
+.author-details .avatar img {
+    border: 1px solid var(--White, #FFF);
+    border-radius: 50%;
+    width: 33px;
+    height: 33px;
+}
+
+.author-details .author {
+    color: var(--White, #FFF);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Outfit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+div.line {
+    height: 1px;
+    background: var(--very-dark-blue-line, #2E405A);
+    margin-top: 24px;
+}
